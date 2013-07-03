@@ -1,0 +1,9 @@
+Abner
+600
+Paul
+300
+250
+Santa
+100
+Lola
+10

@@ -1,0 +1,10 @@
+Abner
+30
+Rick
+20
+Paul
+10
+Becky
+3
+Lola
+1
