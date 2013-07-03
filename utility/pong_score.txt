@@ -2,8 +2,9 @@ Abner
 600
 Paul
 300
-250
+Kevin
+150
 Santa
+120
+Becki
 100
-Lola
-10
