@@ -1,6 +1,6 @@
 PyArcade 1.0
 
-Three simple 2D Python games written using the famous Pygame library and wrapped into an arcade-like interface.
+Three 2D Python games written using the famous Pygame library and wrapped into an arcade-like interface.
 
 * Language: Pyhon 2.7.x (http://python.org/download)
 
@@ -18,7 +18,7 @@ Games included:
 
 Pong -- A recreation of the famous game of Pong.
 
-Simon Says -- The well-known Simon Says, in which the player has to keep track of an ever-growing sequence of colors   and sounds.
+Simon Says -- The well-known Simon Says, in which the player has to keep track of an ever-growing sequence of colors and sounds.
 
 Save the Phone -- You left your phone outside and random ojbects are falling from the sky! Steer clear of the hubris.
 ========================
