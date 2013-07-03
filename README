@@ -1,3 +1,4 @@
+========================
 PyArcade 1.0
 ========================
 Three simple 2D Python games written using the famous Pygame library and wrapped into an arcade-like interface.
@@ -6,10 +7,14 @@ Three simple 2D Python games written using the famous Pygame library and wrapped
 
 * Library: Pygame 1.9.x (http://pygame.org/download.shtml)
 ========================
+
+========================
 Installation
 
 Download all source files and folders in a common directory. With recent versions of Python 2 and Pygame installed
 on your system, run main.py to play.
+========================
+
 ========================
 Games included:
 
