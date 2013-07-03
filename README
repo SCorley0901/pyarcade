@@ -9,8 +9,8 @@ Three 2D Python games written using the famous Pygame library and wrapped into a
 ========================
 Installation
 
-Download all source files and folders in a common directory. With recent versions of Python 2 and Pygame installed
-on your system, run main.py to play.
+Download all source files and folders in a common directory. If you have recent versions of Python 2 and Pygame installed
+on your system, just run main.py to play.
 ========================
 
 ========================
