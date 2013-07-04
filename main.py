@@ -89,15 +89,13 @@ def handle_input(menu):
 
     if menu.option == constants.PONG:
         Pong().start()
-        
-    if menu.option == constants.SIMON:
+    elif menu.option == constants.SIMON:
         Simon().start()
-
-    if menu.option == constants.PHONE:
+    else:
         Game().start()
 
     handle_score(menu.option)
-
+        
     menu.option = None # Reset
     
 
@@ -108,6 +106,7 @@ def handle_score(option):
     Keyword argument:
     option -- a valid value from menu.option or directly from
               constants.py
+              
     """
     current_score = open("utility/current_score.txt", "r")
 
