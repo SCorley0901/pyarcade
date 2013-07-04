@@ -36,8 +36,6 @@ from menu import Menu
 
 import score
 
-from score import ScoreMenu
-
 from utility import games, constants
 
 # ------------------
@@ -48,6 +46,10 @@ from simon import Simon
 
 from phone import Game
 # ------------------
+
+SCORE_FILES = {constants.PONG: "utility/pong_score.txt",
+               constants.SIMON: "utility/simon_score.txt",
+               constants.PHONE: "utility/phone_score.txt"}
 
 def handle_input(menu):
     """
@@ -61,43 +63,62 @@ def handle_input(menu):
     menu -- an instance of Menu() from menu.py
     
     """
-    # Notice that one could avoid the multiple if statements, but it
-    # might make the code a little less readable.
+    # The multiple if statements below could be avoided. For example, by doing:
+    #
+    # pyarcade = {constants.PONG: Pong(),
+    #             constants.SIMON: Simon(),
+    #             ... }
+    #
+    # pyarcade[menu.option].start()
+    #
+    # However, undesirable graphic issues with the pygame window
+    # occur whenever we initialize these game objects in succession. Thus,
+    # separating each case with if statements is the plausible way to go here.
     if games.keyboard.is_pressed(games.K_ESCAPE):
-            games.music.stop()
-            games.load_sound("sound/menu/exit.wav").play()
-            pygame.time.wait(800)
-            sys.exit(0)
-            
-    current_score = open("utility/current_score.txt", "r")
-        
-    if menu.option == constants.PONG:
-        Pong().start()
-        score.add_score(name=NAME,
-                        value=int(current_score.read()),
-                        txt_file_path="utility/pong_score.txt")
-                
-    if menu.option == constants.SIMON:
-        Simon().start()
-        score.add_score(name = NAME,
-                        value=int(current_score.read()),
-                        txt_file_path = "utility/simon_score.txt")
-            
-    if menu.option == constants.PHONE:
-        Game().start()
-        score.add_score(name = NAME,
-                        value=int(current_score.read()),
-                        txt_file_path = "utility/phone_score.txt")
-            
+        games.music.stop()
+        games.load_sound("sound/menu/exit.wav").play()
+        pygame.time.wait(800)
+        sys.exit(0)
+
     if menu.option == constants.EXIT:
         sys.exit(0)
-            
+
     if menu.option == constants.SCORE:
-        ScoreMenu().start()
+        score.ScoreMenu().start()
+        return
+
+    if menu.option == constants.PONG:
+        Pong().start()
+        
+    if menu.option == constants.SIMON:
+        Simon().start()
+
+    if menu.option == constants.PHONE:
+        Game().start()
+
+    handle_score(menu.option)
 
     menu.option = None # Reset
+    
+
+def handle_score(option):
+    """
+    Add game points to high score.
+
+    Keyword argument:
+    option -- a valid value from menu.option or directly from
+              constants.py
+    """
+    current_score = open("utility/current_score.txt", "r")
+
+    # Score will not be added by the function if the player's
+    # score doesn't make it to the current high score table.
+    score.add_score(name=NAME,
+                    value=int(current_score.read()),
+                    txt_file_path = SCORE_FILES[option])
 
     current_score.close()
+                   
 
 def main():
     """Kickstart PyArcade."""

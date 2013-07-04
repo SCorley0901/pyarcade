@@ -2,9 +2,9 @@ Abner
 30
 Rick
 20
+Kevin
+16
 Paul
 10
 Becky
-3
-Lola
 1
