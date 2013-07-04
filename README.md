@@ -8,6 +8,7 @@ Three simple 2D Python games written using the famous Pygame library and wrapped
 * Library: Pygame 1.9.x (http://pygame.org/download.shtml)
 
 ========================
+
 Games included:
 
 Pong -- A recreation of the famous game of Pong.
@@ -15,6 +16,7 @@ Pong -- A recreation of the famous game of Pong.
 Simon Says -- The well-known Simon Says, in which the player has to keep track of an ever-growing sequence of colors and sounds.
 
 Save the Phone -- You left your phone outside and random ojbects are falling from the sky! Steer clear of the hubris.
+
 ========================
 Installation
 
