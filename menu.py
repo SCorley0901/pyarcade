@@ -25,7 +25,8 @@ games.init(screen_width = 640, screen_height = 480, fps = 50)
 
 games.window.title = "PyArcade"
 
-# [Note: Always manage games.window after the graphics screen is initialized.]
+# [Note: Always manage games.window after the graphics screen
+#        is initialized (not before).]
 
 class Cursor(games.Sprite):
     """The cursor for the menu."""
