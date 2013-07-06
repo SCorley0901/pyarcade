@@ -26,7 +26,3 @@ Games included:
 Download
 --------
 Download zip file ![here](https://www.dropbox.com/s/y45qn65j5or2blb/pyarcade.zip).
-
-Extract all source files and folders in a common directory. If you have recent versions of Python 2 and Pygame installed
-on your system, just run main.py to play.
-
