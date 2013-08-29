@@ -1,10 +1,10 @@
 Abner
 600
+Glory
+450
 Paul
 300
+Glory
+160
 Kevin
 150
-Santa
-120
-Becky
-10

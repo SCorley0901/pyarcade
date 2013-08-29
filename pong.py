@@ -7,7 +7,7 @@
 #
 # Programmer: Abner Coimbre
 
-"""Pong -- A Pygame version."""
+"""Pong -- A Pygame version"""
 
 import sys
 
@@ -302,6 +302,8 @@ class Pong(object):
                                        # window while playing)
                                        
         games.mouse.is_visible = False # forbid mouse visibility
+        
+        games.music.load("sound/pong/theme.wav")
 
     def __str__(self):
         return "Pong"
@@ -319,6 +321,8 @@ class Pong(object):
         
         for object in self.game_objects:
             games.screen.add(object)
+            
+        games.music.play(-1)
             
         # Start Pong
         games.screen.mainloop()

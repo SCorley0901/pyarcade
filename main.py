@@ -38,8 +38,8 @@ import score
 
 from utility import games, constants
 
+# Games
 # ------------------
-# games
 from pong import Pong
 
 from simon import Simon
@@ -73,7 +73,7 @@ def handle_input(menu):
     #
     # However, undesirable graphic issues with the pygame window
     # occur whenever we initialize these game objects in succession. Thus,
-    # separating each case with if statements is the plausible way to go here.
+    # separating each case with if-statements is the plausible way to go here.
     if games.keyboard.is_pressed(games.K_ESCAPE):
         games.music.stop()
         games.load_sound("sound/menu/exit.wav").play()
@@ -92,7 +92,7 @@ def handle_input(menu):
     elif menu.option == constants.SIMON:
         Simon().start()
     else:
-        Game().start()
+        Game().start() # [Note: Game() == SaveThePhone()]
 
     handle_score(menu.option)
         
@@ -134,4 +134,5 @@ def main():
         handle_input(menu)
         
 # start PyArcade
-main()
+if __name__ == '__main__':
+    main()
