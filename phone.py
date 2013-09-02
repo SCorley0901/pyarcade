@@ -19,9 +19,9 @@ from utility import games, color
 from score import check_score
 
 if __name__ == '__main__':
-    print "-phone.py-\n"
-    print "You ran this module directly. Try main.py\n"
-    raw_input("* Press the enter key to exit.")
+    print("-phone.py-\n")
+    print("You ran this module directly. Try main.py\n")
+    input("* Press the enter key to exit.")
     sys.exit(1)
 
 L_BOUNDARY = 17 
@@ -193,7 +193,7 @@ class Game(object):
         
         self.score = 0 # [Note: score = # of objects avoided by phone]
         
-        games.music.load("sound/phone/theme.mp3")
+        games.music.load("sound/phone/theme.wav")
 
         self._count = 3 * games.screen.fps
 

@@ -20,9 +20,9 @@ from utility import games, color
 from score import check_score
 
 if __name__ == '__main__':
-    print "-simon.py-\n"
-    print "You ran this module directly. Try main.py\n"
-    raw_input("* Press the enter key to exit.")
+    print("-simon.py-\n")
+    print("You ran this module directly. Try main.py\n")
+    input("* Press the enter key to exit.")
     sys.exit(1)
 
 score = None
@@ -222,9 +222,9 @@ class Simon(object):
 
         # game-screen settings
         games.screen.event_grab = False # focus input on game screen (i.e. don't
-                                       # allow the mouse to exit the graphics
-                                       # window while playing). This happens if
-                                       # it's set to True.
+                                        # allow the mouse to exit the graphics
+                                        # window while playing). This happens if
+                                        # it's set to True.
                                        
         games.mouse.is_visible = False # forbid mouse visibility
     

@@ -15,9 +15,9 @@ import pygame
 from utility import games, color
 
 if __name__ == '__main__':
-    print "-score.py-\n"
-    print "You ran this module directly. Try main.py\n"
-    raw_input("* Press the enter key to exit.")
+    print("-score.py-\n")
+    print("You ran this module directly. Try main.py\n")
+    input("* Press the enter key to exit.")
     sys.exit(1)
 
 EXIT = 0
@@ -303,7 +303,7 @@ class ScoreMenu(object):
         # ^ So it may be accessed by outside functions (such as show_scores()).
         # Equivalent to the get_options() method and its property 'options'.
 
-        games.music.load("sound/menu/high_score_theme.mp3")
+        games.music.load("sound/menu/high_score_theme.wav")
 
     def start(self):
         """Start the score's menu."""

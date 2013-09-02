@@ -1,10 +1,10 @@
 Abner
-150
-Abner
 20
-Glory
+Jan
 17
+Santa
+7
+Glory
+5
 Paul
-13
-Becky
-11
+3

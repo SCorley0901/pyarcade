@@ -53,6 +53,9 @@
 #	- 'colour' is now 'color'
 #
 # Modified by Abner Coimbre
+#   Updated Source Code
+#       - Now uses Python 3.x features. No longer works for Python 2.
+#       - To make it Python 2 compatible, use the well-known python 3to2 tool.
 #
 #   Updated Screen Class
 #       - delegated the initial call: pygame.display.set_mode() to the Window class
@@ -179,7 +182,7 @@ class Screen(object):
     def __init__ (self, width=640, height=480, fps=50): 
         # Bomb if you try this more than once
         if Screen.initialized: 
-            raise GamesError, "Cannot have more than on Screen object" 
+            raise GamesError("Cannot have more than on Screen object") 
          
         Screen.initialized = 1
 
@@ -513,7 +516,7 @@ class Sprite(object):
                  interval=1, is_collideable=True):
         
         if not Screen.initialized: 
-            raise GamesError, "Screen object must be intialized before any Sprite object" 
+            raise GamesError("Screen object must be intialized before any Sprite object") 
  
         self._surface = image 
         self._orig_surface = image    # Surface before any rotation 
@@ -866,16 +869,17 @@ class Animation(Sprite):
                  repeat_interval=1, n_repeats=0, is_collideable=True):
                  
         if images and type(images[0]) is type(""):
-	    images = load_animation(images)
-	    
-        self.images = images
-      	if self.images == []:
-	    raise GamesError, "An animation with no images is illegal."
-
-	self.n_repeats = n_repeats or -1
-	if self.n_repeats > 0:
-            self.n_repeats = (self.n_repeats * len(self.images))
+            images = load_animation(images)
             
+        self.images = images
+        if self.images == []:
+            raise GamesError("An animation with no images is illegal.")
+
+        self.n_repeats = n_repeats or -1
+
+        if self.n_repeats > 0:    
+            self.n_repeats = (self.n_repeats * len(self.images))
+
         first_image = self.next_image()
         
         Sprite.__init__(self, self.next_image(), angle,
@@ -893,7 +897,7 @@ class Animation(Sprite):
 
     def tick(self):
         new_image = self.next_image()
-	if new_image is None:
+        if new_image is None:
             self.destroy()
         else:
             self.image = new_image
@@ -915,7 +919,7 @@ def load_image(filename, transparent=True):
     try: 
         surface = pygame.image.load(filename) 
     except pygame.error: 
-        raise GamesError, 'Could not load image "%s" %s'%(filename, pygame.get_error()) 
+        raise GamesError('Could not load image "%s" %s'%(filename, pygame.get_error())) 
     if transparent: 
         corner = surface.get_at((0, 0)) 
         surface.set_colorkey(corner, RLEACCEL) 
@@ -935,13 +939,13 @@ def load_animation(filenames, transparent=1):
     """
     def _(name, transparent=transparent):
         try: surface = pygame.image.load(name)
-	except pygame.error:
-	    raise GamesError, 'Could not load animation frame "%s": %s' % (
-	        name, pygame.get_error())
+        except pygame.error:
+            raise GamesError('Could not load animation frame "%s": %s' % (
+                name, pygame.get_error()))
         if transparent:
-	    surface.set_colorkey(surface.get_at((0,0)), RLEACCEL)
-	return surface.convert()
-    files = map(_, filenames)
+            surface.set_colorkey(surface.get_at((0,0)), RLEACCEL)
+            return surface.convert()
+    files = list(map(_, filenames))
     return files
  
 def load_sound(filename): 

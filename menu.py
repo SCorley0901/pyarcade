@@ -15,9 +15,9 @@ import pygame
 from utility import games, color, constants
 
 if __name__ == '__main__':
-    print "-menu.py-\n"
-    print "You ran this module directly. Try main.py\n"
-    raw_input("* Press the enter key to exit.")
+    print("-menu.py-\n")
+    print("You ran this module directly. Try main.py\n")
+    input("* Press the enter key to exit.")
     sys.exit(1)
 
 # Initialize screen
@@ -189,7 +189,7 @@ class Menu(object):
 
         games.screen.add(Cursor(self))
 
-        games.music.load("sound/menu/theme.mp3")
+        games.music.load("sound/menu/theme.wav")
         
         games.music.play(-1)
         

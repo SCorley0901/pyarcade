@@ -24,7 +24,7 @@
 
 """Runs and manages PyArcade 1.0"""
 
-name = raw_input("PyArcade 1.0 -- Enter a player name (5 characters or less): ")
+name = input("PyArcade 1.0 -- Enter a player name (5 characters or less): ")
 
 NAME = name[:5]
 

@@ -22,9 +22,9 @@ from utility import games, color
 from score import check_score
 
 if __name__ == '__main__':
-    print "-pong.py-\n"
-    print "You ran this module directly. Try main.py\n"
-    raw_input("* Press the enter key to exit.")
+    print("-pong.py-\n")
+    print("You ran this module directly. Try main.py\n")
+    input("* Press the enter key to exit.")
     sys.exit(1)
 
 class Paddle(games.Sprite):
@@ -109,7 +109,7 @@ class Ball(games.Sprite):
     
     bottom_coord = 0
     
-    current_dx = None
+    current_dx = 0
     
     def __init__(self, game):
         """Initialize the ball."""
