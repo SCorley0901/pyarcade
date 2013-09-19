@@ -1,4 +1,4 @@
-#/usr/bin/env python
+#!/usr/bin/env python
 #
 # Main
 #
@@ -9,12 +9,11 @@
 # PyArcade is a very small collection of
 # simple games made using the popular
 # Pygame library and games.py (a wrapper
-# for the library, updated by Michael Dawson
-# and myself --see the script for more details).
+# for the library, updated to Python 3).
 # It showcases the flexibility of programming
 # games in Python.
 #
-# Requirements: Python 2.7.x and Pygame 1.9.2a0 (latest release)
+# Requirements: Python 3.3.x and Pygame 1.9.2a0 (latest release)
 #
 # Download sites: * Python (http://python.org/download/)
 #                 * Pygame (http://pygame.org/download.shtml)
