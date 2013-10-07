@@ -62,17 +62,6 @@ def handle_input(menu):
     menu -- an instance of Menu() from menu.py
     
     """
-    # The multiple if statements below could be avoided. For example, by doing:
-    #
-    # pyarcade = {constants.PONG: Pong(),
-    #             constants.SIMON: Simon(),
-    #             ... }
-    #
-    # pyarcade[menu.option].start()
-    #
-    # However, undesirable graphic issues with the pygame window
-    # occur whenever we initialize these game objects in succession. Thus,
-    # separating each case with if-statements is the plausible way to go here.
     if games.keyboard.is_pressed(games.K_ESCAPE):
         games.music.stop()
         games.load_sound("sound/menu/exit.wav").play()
@@ -91,7 +80,7 @@ def handle_input(menu):
     elif menu.option == constants.SIMON:
         Simon().start()
     else:
-        Game().start() # [Note: Game() == SaveThePhone()]
+        Game().start() # [Note: Game() refers to the game "Save the Phone"]
 
     handle_score(menu.option)
         
