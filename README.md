@@ -1,6 +1,9 @@
 PyArcade 1.0
 ========
 
+**These were some games I programmed while I was still learning how to program. It was pretty enjoyable. Then again,
+it's Python ;)**
+
 Three Python games using the famous Pygame library, wrapped into an arcade-like interface.
 
 - **Language**: Pyhon 3.3.x (http://python.org/download)
@@ -10,18 +13,18 @@ Three Python games using the famous Pygame library, wrapped into an arcade-like 
 Games included:
 --------
 
-- **Pong** -- *A recreation of the famous game of Pong.*
+- **Save the Phone** -- *You left your phone outside and random objects are falling from the sky!* 
+                        *Steer clear of the hubris.*
 
-![pong](https://dl.dropboxusercontent.com/u/47358139/pong_new.png)
+![phone](https://dl.dropboxusercontent.com/u/47358139/save_phone.png)
 
 - **Simon Says** -- *The player keeps track of an ever-growing sequence of colors and sounds.*
 
 ![simon](https://dl.dropboxusercontent.com/u/47358139/simon.gif)
 
-- **Save the Phone** -- *You left your phone outside and random objects are falling from the sky!* 
-                        *Steer clear of the hubris.*
+- **Pong** -- *A recreation of the famous game of Pong.*
 
-![phone](https://dl.dropboxusercontent.com/u/47358139/save_phone.png)
+![pong](https://dl.dropboxusercontent.com/u/47358139/pong_new.png)
 
 Download
 --------
