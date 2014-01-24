@@ -1,7 +1,7 @@
 PyArcade 1.0
 ========
 
-**A simple game and two classic clones made when I just starting out. It was pretty enjoyable. Then again,
+**A simple game and two classic clones made when I just starting out. Please report any issues. It was pretty enjoyable. Then again,
 it's Python ;)**
 
 Three Python games using the famous Pygame library, wrapped into an arcade-like interface.
